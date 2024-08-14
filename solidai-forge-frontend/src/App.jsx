@@ -14,6 +14,11 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import ReactMarkdown from "react-markdown";
 import "@rainbow-me/rainbowkit/styles.css";
+// import "./styles/styles.css";
+// import { parallaxMouseMovement, parallaxScroll } from "@/utils/parallax";
+
+// import { init_wow } from "@/utils/initWowjs";
+// import { headerChangeOnScroll } from "@/utils/changeHeaderOnScroll";
 
 const DEFAULT_DESCRIPTION = `Create a Solidity smart contract for a simple ERC20 token with the following features:
 1. The token should be named "ExampleToken" with the symbol "EXT".
@@ -116,12 +121,12 @@ export default function App() {
     >
       <Container maxWidth="md" sx={{ width: "100%" }}>
         <Typography variant="h2" component="h1" gutterBottom align="center">
-          SolidAI Forge
+          AirForge
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom align="center">
           Generate, Compile, and Deploy Solidity Smart Contracts
         </Typography>
-        <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
           <ConnectButton />
         </Box>
         <Paper elevation={3} sx={{ p: 3, my: 3, width: "100%" }}>
