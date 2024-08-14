@@ -46,14 +46,16 @@ export default function App() {
 
   const { address, isConnected } = useAccount();
 
+  // const API_URL = "http://localhost:8000";
+  const API_URL = "https://airforge-backend-f32c6563548d.herokuapp.com";
+
   const handleGenerateContract = async () => {
     setIsLoading(true);
     setError("");
     try {
-      const response = await axios.post(
-        "http://localhost:8000/generate_contract",
-        { description }
-      );
+      const response = await axios.post(API_URL + "/generate_contract", {
+        description,
+      });
       setGeneratedCode(response.data.code);
       setFirstExplanation(response.data.first_explanation);
       setLastExplanation(response.data.last_explanation);
@@ -69,12 +71,9 @@ export default function App() {
 
   const compileContract = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:8000/compile_contract",
-        {
-          code: generatedCode,
-        }
-      );
+      const response = await axios.post(API_URL + "/compile_contract", {
+        code: generatedCode,
+      });
       setCompiledContract(response.data);
       console.log("Contract compiled successfully");
     } catch (err) {
