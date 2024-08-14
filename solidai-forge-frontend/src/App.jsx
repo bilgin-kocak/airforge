@@ -14,6 +14,11 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import ReactMarkdown from "react-markdown";
 import "@rainbow-me/rainbowkit/styles.css";
+import Footer from "./components/Footer";
+// import { Parallax } from "react-parallax";
+// import { motion } from "framer-motion";
+// import { FaRocket, FaCode, FaPaperPlane } from "react-icons/fa";
+// import { Button, FeatureCard, LoadingSpinner } from "./components/CustomComponents";
 // import "./styles/styles.css";
 // import { parallaxMouseMovement, parallaxScroll } from "@/utils/parallax";
 
@@ -109,6 +114,13 @@ export default function App() {
   };
 
   return (
+    // <Box
+    //   sx={{
+    //     display: "flex",
+    //     flexDirection: "column",
+    //     minHeight: "100vh", // Ensures the footer stays at the bottom
+    //   }}
+    // >
     <Box
       sx={{
         display: "flex",
@@ -227,5 +239,7 @@ export default function App() {
         )}
       </Container>
     </Box>
+    //   <Footer />
+    // </Box>
   );
 }
