@@ -4,10 +4,22 @@ import { WagmiProvider } from "wagmi";
 import { sepolia } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
+const airdaoTestnet = {
+  chainId: 22040,
+  chainName: "AirDAO Testnet",
+  rpcUrls: ["https://network.ambrosus-test.io"],
+  nativeCurrency: {
+    name: "AMB",
+    symbol: "AMB",
+    decimals: 18,
+  },
+  // blockExplorerUrls: ["https://etherscan.io/"],
+};
+
 const config = getDefaultConfig({
-  appName: "My RainbowKit App",
+  appName: "AirForge",
   projectId: "YOUR_PROJECT_ID",
-  chains: [sepolia],
+  chains: [sepolia, airdaoTestnet],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 
